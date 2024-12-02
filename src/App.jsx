@@ -14,12 +14,13 @@ const App = () => {
           <div className="hero-content">
           <div className="hero-text">
             <h1>Ready to Transform Your Home In SoCal? </h1>
-            <p>Bathrooms, kitchens,rooms, we do it all</p>
+            <p>We Can Do It All, Customly Made To Your Liking</p>
+
           </div>
           <form className="hero-form">
-            <input type="text" placeholder="Full Name" className="form-input" />
-            <input type="email" placeholder="Email" className="form-input" />
-            <input type="pn" placeholder="Phone Number" className="form-input" />
+            <input type="text" placeholder="Full Name" className="form-input"required />
+            <input type="email" placeholder="Email" className="form-input" required />
+            <input type="pn" placeholder="Phone Number" className="form-input" required />
             <button className="cta-button">Get Your Free Estimate</button>
           </form>
           </div>

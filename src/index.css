@@ -16,7 +16,7 @@
     height: 90vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('https://i.pinimg.com/736x/e9/c5/1a/e9c51a18c70af8e3711f00089a4b6561.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center left;
     color: #FFFAF0;
     border-radius: 23px;
     padding: 2rem;
@@ -56,6 +56,11 @@
     font-size: 2.5rem;
     line-height: 1.2;
   }
+  .hero-text p {
+    font-size: 1.3rem;
+    line-height: 1.2;
+    margin-top: 5px;
+  }
   
 
   
@@ -65,15 +70,19 @@
     gap: 1rem;
     width: 100%;
     max-width: 400px;
+    font-family: lora;
+
   }
   
   .form-input,
   .form-textarea {
+    font-family: lora;
+    font-weight: bold;
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #DFA46D;
     border-radius: 0.4rem;
-    background: #fff;
+    background: #FFFAF0;
     color: #333;
     font-size: 1rem;
   }
