@@ -188,7 +188,7 @@
   .reasons-grid {
     max-width: 1800px;
     margin: 0 auto;
-    display: column;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
@@ -381,7 +381,7 @@
 
   @media (max-width: 768px) {
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
   
     section {
