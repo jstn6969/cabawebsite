@@ -27,6 +27,40 @@ const App = () => {
       </section>
 
 
+      <section className="why-remodel">
+        <h2>Why Should You Remodel Your Home?</h2>
+        <div className="reasons-grid">
+          {[
+            {
+              image: " https://i.pinimg.com/736x/f3/97/58/f39758e05bcbcc30606ffa503be82173.jpg",
+              title: " 💸 Instantly Increases Your Home Value",
+              text: "Remodeling your house is an investment. The more value you add, the more value you get back. Premium materials, expert craftsmanship, and modern upgrades directly impact your property's market value. On Average Houses Appreciate: ",
+              numbers:"30-70%"
+            },
+            {
+              image: "https://i.pinimg.com/736x/7c/de/ec/7cdeecfebe50d289f1eddc7c289d1f6a.jpg ",
+              title: " ⭐️ Turn Your Dreams Into Reality",
+              text: "Every home has untapped potential waiting to be discovered. Our expert team transforms your vision into stunning spaces that exceed expectations, delivering premium craftsmanship that stands the test of time.",
+              numbers:"Over 50 Homes Transformed "
+            },
+            {
+            image: "https://i.pinimg.com/736x/45/b1/f3/45b1f3125f515c7c2e4714c35e64d4d5.jpg ",
+            title: " ⚡ Huge Energy Savings",
+            text: "New Appliances Can Help Reduce Yearly Utility Costs Such As Windows & HVAC Unit. You Can Expect To Save From:",
+            numbers: " $1,800 - 2,400 "
+          },
+          ].map((reason, index) => (
+            <div key={index} className="reason-card">
+              <img src={reason.image}></img>
+              <div className='reason-content'>
+              <h3>{reason.title}</h3>
+              <p>{reason.text}</p>
+              <h4>{reason.numbers}</h4>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
 
       <section className="services">
@@ -74,40 +108,6 @@ const App = () => {
 
 
 
-      <section className="why-remodel">
-        <h2>Why Should You Remodel Your Home?</h2>
-        <div className="reasons-grid">
-          {[
-            {
-              image: " https://i.pinimg.com/736x/f3/97/58/f39758e05bcbcc30606ffa503be82173.jpg",
-              title: " 💸 Instantly Increases Your Home Value",
-              text: "Remodeling your house is an investment. The more value you add, the more value you get back. Premium materials, expert craftsmanship, and modern upgrades directly impact your property's market value. On Average Houses Appreciate: ",
-              numbers:"30-70%"
-            },
-            {
-              image: "https://i.pinimg.com/736x/7c/de/ec/7cdeecfebe50d289f1eddc7c289d1f6a.jpg ",
-              title: " ⭐️ Turn Your Dreams Into Reality",
-              text: "Every home has untapped potential waiting to be discovered. Our expert team transforms your vision into stunning spaces that exceed expectations, delivering premium craftsmanship that stands the test of time.",
-              numbers:"Over 50 Homes Transformed "
-            },
-            {
-            image: "https://i.pinimg.com/736x/45/b1/f3/45b1f3125f515c7c2e4714c35e64d4d5.jpg ",
-            title: " ⚡ Huge Energy Savings",
-            text: "New Appliances Can Help Reduce Yearly Utility Costs Such As Windows & HVAC Unit. You Can Expect To Save From:",
-            numbers: " $1,800 - 2,400 "
-          },
-          ].map((reason, index) => (
-            <div key={index} className="reason-card">
-              <img src={reason.image}></img>
-              <div className='reason-content'>
-              <h3>{reason.title}</h3>
-              <p>{reason.text}</p>
-              <h4>{reason.numbers}</h4>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
 
 
