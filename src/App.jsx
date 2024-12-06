@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import cabaLogo from '/src/assets/cabalogo.png';  // Add this at the top of your file
+
 
 const App = () => {
   return (
@@ -9,7 +11,7 @@ const App = () => {
 
       <section className="hero">
           <div className="logo">
-            <img src="src/assets/cabalogo.png" alt="CABA Remodeling" className="logo-image" />
+          <img src={cabaLogo} alt="CABA Remodeling" className="logo-image" />
           </div>
           <div className="hero-content">
           <div className="hero-text">
@@ -43,12 +45,7 @@ const App = () => {
               text: "Every home has untapped potential waiting to be discovered. Our expert team transforms your vision into stunning spaces that exceed expectations, delivering premium craftsmanship that stands the test of time.",
               numbers:"Over 50 Homes Transformed "
             },
-            {
-            image: "https://i.pinimg.com/736x/45/b1/f3/45b1f3125f515c7c2e4714c35e64d4d5.jpg ",
-            title: " ⚡ Huge Energy Savings",
-            text: "New Appliances Can Help Reduce Yearly Utility Costs Such As Windows & HVAC Unit. You Can Expect To Save From:",
-            numbers: " $1,800 - 2,400 "
-          },
+
           ].map((reason, index) => (
             <div key={index} className="reason-card">
               <img src={reason.image}></img>
