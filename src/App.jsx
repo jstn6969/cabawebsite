@@ -29,35 +29,6 @@ const App = () => {
       </section>
 
 
-      <section className="why-remodel">
-        <h2>Why Should You Remodel Your Home?</h2>
-        <div className="reasons-grid">
-          {[
-            {
-              image: " https://i.pinimg.com/736x/f3/97/58/f39758e05bcbcc30606ffa503be82173.jpg",
-              title: " 💸 Instantly Increases Your Home Value",
-              text: "Remodeling your house is an investment. The more value you add, the more value you get back. Premium materials, expert craftsmanship, and modern upgrades directly impact your property's market value. On Average Houses Appreciate: ",
-              numbers:"30-70%"
-            },
-            {
-              image: "https://i.pinimg.com/736x/7c/de/ec/7cdeecfebe50d289f1eddc7c289d1f6a.jpg ",
-              title: " ⭐️ Turn Your Dreams Into Reality",
-              text: "Every home has untapped potential waiting to be discovered. Our expert team transforms your vision into stunning spaces that exceed expectations, delivering premium craftsmanship that stands the test of time.",
-              numbers:"Over 50 Homes Transformed "
-            },
-
-          ].map((reason, index) => (
-            <div key={index} className="reason-card">
-              <img src={reason.image}></img>
-              <div className='reason-content'>
-              <h3>{reason.title}</h3>
-              <p>{reason.text}</p>
-              <h4>{reason.numbers}</h4>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
 
       <section className="services">
@@ -66,28 +37,28 @@ const App = () => {
           {[
             { 
               img: "https://i.pinimg.com/736x/8c/90/87/8c9087bb6b4464cba963c89a4fd94ac7.jpg",
-              title: "Kitchen Remodeling",
-              text: "Starting From",
-              price: "$30,000",
+              title: "🍳 Kitchen Remodeling",
+              text: "3-6 Weeks",
+              price: "$30,000+",
 
             },
             { 
               img: "https://i.pinimg.com/736x/06/53/15/065315a6ce4d1fd890cded79ad8befe0.jpg",
-              title: "Bathroom Renovation",
-              text: "Starting From",
-              price: "$15,000" 
+              title: "🚿 Bathroom Renovation",
+              text: "2-4 Weeks",
+              price: "$15,000+" 
             },
             { 
               img: "https://i.pinimg.com/736x/5a/2f/a1/5a2fa1eca69bd26c556e9dd7733dbc16.jpg",
-              title: "Living Rooms",
-              text: "Starting From",
-              price: "$20,000"
+              title: "🛋️ Living Rooms",
+              text: "2-6 Weeks",
+              price: "$15,000+"
             },
             { 
-              img: "https://i.pinimg.com/736x/77/7d/c0/777dc0b607764b9424e219a4c4c245b1.jpg",
-              title: "Full House",
-              text: "Starting From",
-              price: "$150,000"
+              img: "https://i.pinimg.com/736x/29/8c/ae/298cae290203b0c616dbb099bf2d33ae.jpg",
+              title: "🛏️ Bedrooms",
+              text: "1-4 Weeks",
+              price: "$10,000+"
             }
           ].map((service, index) => (
             <div key={index} className="service-card">
@@ -105,9 +76,32 @@ const App = () => {
 
 
 
+      <section className="why-remodel">
+        <h2>Why Should You Remodel Your Home?</h2>
+        <div className="reasons-grid">
+          {[
+            {
+              title: " 💸 Instantly Increases Your Home Value",
+              text: "Remodeling your house is an investment. The more value you add, the more value you get back. Premium materials, expert craftsmanship, and modern upgrades directly impact your property's market value. On Average Houses Appreciate: ",
+              numbers:"30-70%"
+            },
+            {
+              title: " ⭐️ Turn Your Dreams Into Reality",
+              text: "Every home has untapped potential waiting to be discovered. Our expert team transforms your vision into stunning spaces that exceed expectations, delivering premium craftsmanship that stands the test of time.",
+              numbers:"Over 50 Homes Transformed "
+            },
 
-
-
+          ].map((reason, index) => (
+            <div key={index} className="reason-card">
+              <div className='reason-content'>
+              <h3>{reason.title}</h3>
+              <p>{reason.text}</p>
+              <h4>{reason.numbers}</h4>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
 
 
