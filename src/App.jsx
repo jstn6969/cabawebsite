@@ -58,7 +58,7 @@ const App = () => {
               img: "https://i.pinimg.com/736x/29/8c/ae/298cae290203b0c616dbb099bf2d33ae.jpg",
               title: "🛏️ Bedrooms",
               text: "1-4 Weeks",
-              price: "$10,000+"
+              price: "$5,000+"
             }
           ].map((service, index) => (
             <div key={index} className="service-card">
@@ -86,15 +86,16 @@ const App = () => {
               numbers:"30-70%"
             },
             {
+              title: " ⚡️ Higher Safety & More Energy Efficient",
+              text: "Upgrading your home can increase safety and help you save money. Having better systems in place can make your life easier & save annualy around: ",
+              numbers:"$1000-$3000"
+            },
+            {
               title: " ⭐️ Experience Living In  Your Dream Home",
               text: "Transform your house into exactly what you want. Customize every part to perfection so that you can live in your dream home like many others:",
               numbers:"Over 50 Homes Transformed "
             },
-          {
-            title: " ⚡️ Higher Safety & More Energy Efficient",
-            text: "Upgrading your home can increase safety and help you save money. Having better systems in place can make your life easier & save annualy around: ",
-            numbers:"$1000-$3000"
-          },
+
 
           ].map((reason, index) => (
             <div key={index} className="reason-card">
@@ -149,69 +150,213 @@ const App = () => {
         <div className="testimonials-grid">
           {[
             {
-              name: "Jennifer Smith",
-              project: "Complete Kitchen Remodel",
+              name: "Angelica",
+              project: "Bathroom Remodel",
               rating: 5,
-              text: "They transformed our outdated kitchen into a modern masterpiece! The team was professional, clean, and finished ahead of schedule. The attention to detail was remarkable.",
-              image: "/api/placeholder/400/300",
+              text: "Remodeled my bathroom quickly and made it exactly how I wanted. They were very transparent and got the exact materials I wanted.",
+              image: "https://i.pinimg.com/736x/a1/02/e5/a102e5da3544a60d6b2fbbe1826260a4.jpg",
               date: "March 2024",
-              projectValue: "$45,000",
-              location: "Los Angeles, CA"
+              projectValue: "$23,000",
+              location: "📍 Riverside, CA"
             },
             {
-              name: "Michael Rodriguez",
-              project: "Master Bathroom Renovation",
+              name: "Sofia",
+              project: "Bathroom Remodel",
               rating: 5,
-              text: "Outstanding craftsmanship and service. They helped us design our dream bathroom and executed it perfectly. The tile work is absolutely beautiful!",
-              image: "/api/placeholder/400/300",
+              text: "Made selecting the materials super easy and the finished product looked super nice",
+              image: "https://i.pinimg.com/736x/4a/5d/27/4a5d27392276f4b7a0b2f3c46cc04f15.jpg",
               date: "February 2024",
               projectValue: "$25,000",
-              location: "Orange County, CA"
+              location: "📍 Moreno Valley, CA"
             },
             {
-              name: "Sarah Johnson",
-              project: "Full House Remodel",
+              name: "Sarah ",
+              project: "Bathroom Remodel",
               rating: 5,
-              text: "A complete transformation of our 1960s home. The team was incredible from start to finish. They stayed within budget and the results exceeded our expectations.",
-              image: "/api/placeholder/400/300",
+              text: "Turned my old bathroom into my dream one. It looks incredible, just how I wanted it.",
+              image: "https://i.pinimg.com/736x/27/70/cc/2770cc128d9b76fc87ae4e1f98a0bd20.jpg",
               date: "January 2024",
-              projectValue: "$120,000",
-              location: "San Diego, CA"
+              projectValue: "$35,000",
+              location: "📍 Downey, CA",
             }
           ].map((testimonial, index) => (
             <div key={index} className="testimonial-card">
+
+ 
+            
               <img src={testimonial.image}></img>
-              <p className="testimonial-text">"{testimonial.text}"</p>
               <p className="testimonial-name">{testimonial.name}</p>
-              <p className="testimonial-project">{testimonial.project}</p>
+              <p className="testimonial-text">"{testimonial.text}"</p>
+              <p className="testimonial-location">{testimonial.location}</p>
+            </div>
+          ))}
+            <button className='cta-button'>Add Your Review</button>
+
+        </div>
+      </section>
+
+
+
+
+      <section className="service-areas">
+        <h2>Areas We Service</h2>
+        <div className="areas-grid">
+          {[
+            {
+              region: "Los Angeles County (West)",
+              cities: ["Beverly Hills", "West Hollywood", "Century City", "Westwood", "Bel Air", "Hollywood", "Santa Monica", "Culver City", "Brentwood"],
+              responseTime: "2-6 Hours",
+              icon: "🌆",
+              className: "area-card west-la"
+            },
+            {
+              region: "Los Angeles County (East)",
+              cities: ["Downey", "Whittier", "Pico Rivera", "Montebello", "La Mirada", "Santa Fe Springs", "Norwalk", "Cerritos", "Bell Gardens", "South Gate"],
+              responseTime: "2-6 Hours",
+              icon: "🏘️",
+              className: "area-card east-la"
+            },
+            {
+              region: "Riverside County",
+              cities: ["Riverside", "Corona", "Moreno Valley", "Temecula", "Murrieta", "Hemet"],
+              responseTime: "2-6 Hours",
+              icon: "🌅",
+              className: "area-card riverside"
+            },
+            {
+              region: "Orange County",
+              cities: ["Anaheim", "Santa Ana", "Irvine", "Huntington Beach", "Newport Beach", "Costa Mesa"],
+              responseTime: "4-12 Hours",
+              icon: "🏖️",
+              className: "area-card orange-county"
+            }
+          ].map((area, index) => (
+            <div key={index} className={area.className}>
+              <h3>{area.icon} {area.region}</h3>
+              <div className="cities-list">
+                {area.cities.map((city, cityIndex) => (
+                  <span key={cityIndex} className="city-tag">{city}</span>
+                ))}
+              </div>
+              <p className="response-time">Response Time: {area.responseTime}</p>
             </div>
           ))}
         </div>
       </section>
 
+      <section className="payment-options">
+        <h2>Payment Methods</h2>
+        <div className="payment-grid">
+          {[
+            {
+              title: "Cash",
+              description: "Direct cash payments accepted for all services. Get an instant discount when paying in cash.",
+              details: "Most Popular Method",
+              icon: "💵"
+            },
+            {
+              title: "Bank Wire",
+              description: "Secure bank-to-bank transfers. Perfect for larger projects and quick transactions.",
+              details: "Fast & Secure",
+              icon: "🏦"
+            },
+            {
+              title: "Personal Check",
+              description: "We accept personal and business checks. Please allow time for processing.",
+              details: "Traditional Option",
+              icon: "📝"
+            },
+            {
+              title: "Crypto",
+              description: "We accept Bitcoin & other major Cryptocurrencies",
+              details: "Modern Solution",
+              icon: "₿"
+            }
+          ].map((option, index) => (
+            <div key={index} className="payment-card">
+              <div className="payment-icon">{option.icon}</div>
+              <h3>{option.title}</h3>
+              <p className="payment-description">{option.description}</p>
+              <p className="payment-details">{option.details}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       
-    <footer className="footer">
+      <section className="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div className="faq-container">
+    {[
+      {
+        question: "Can I live in my house during the remodel?",
+        answer: "Yes, most clients live at home during remodeling. We set up dust barriers, keep your utilities running, and maintain a clean work area. Kitchen remodels might require temporary kitchen setups, which we can help plan. We work in sections to minimize disruption to your daily life."
+      },
+      {
+        question: "Do I need to buy my own materials and appliances?",
+        answer: "We can handle all material purchases, or you can buy certain items yourself. Most clients prefer us to source major materials (cabinets, countertops, tile) while they choose their own appliances and fixtures. We provide trade discounts on materials when possible."
+      },
+      {
+        question: "What is your project timeline process?",
+        answer: "Each project receives a detailed timeline during consultation. We factor in material delivery, labor schedules, and potential inspection dates. You'll get regular updates as work progresses."
+      },
+      {
+        question: "What if I want to make changes once the project starts?",
+        answer: "Changes can be made during the project, but they may affect timeline and cost. Small changes (like paint color) are usually no problem. Larger changes (like layout) will require a change order and updated timeline. We'll always discuss cost implications before proceeding."
+      },
+      {
+        question: "What's your payment schedule like?",
+        answer: "We typically require 50% deposit to begin work and 35% upon completion. Larger projects might be broken into more payment phases. We accept cash, checks, wire transfers, and crypto."
+      },
+      {
+        question: "What happens if issues arise after completion?",
+        answer: "If you ever have any issues after your remodel, we've got you covered. Whether you need a plumber, an electrician, or a general contractor for any other concerns, we'll send our team members to fix the problem so you'll never have to search for outside help - just give us a call and we'll handle it."
+      }
+    ].map((faq, index) => (
+      <details key={index} className="faq-item">
+        <summary className="faq-question">
+          {faq.question}
+          <span className="faq-icon">+</span>
+        </summary>
+        <div className="faq-answer">
+          <p>{faq.answer}</p>
+        </div>
+      </details>
+    ))}
+  </div>
+</section>
+
+
+
+
+
+
+      
+<footer className="footer">
   <div className="footer-content">
     <div className="footer-section">
       <h3>Contact Us</h3>
-      <div className="footer-links">
-        <a href="tel:+15551234567">(323) 548-9218</a>
-        <a href="mailto:info@cabaremodeling.com">info@cabaremodeling.com</a>
-      </div>
-    </div>
-    
-    <div className="footer-section">
-      <h3>Follow Us</h3>
-      <div className="social-icons">
-        <a href="https://instagram.com/cabaremodeling">Instagram</a>
+      <div className="contact-icons">
+        <a href="tel:+13235489218" className="contact-icon">
+        <img width="48" height="48" src="https://img.icons8.com/color/100/apple-phone.png" alt="apple-phone"/>
+          <span>(323) 548-9218</span>
+        </a>
+        <a href="https://instagram.com/cabaremodeling" className="contact-icon">
+        <img width="48" height="48" src="https://img.icons8.com/color/100/instagram-new--v1.png" alt="instagram-new--v1"/>
+          <span>@cabaremodeling</span>
+        </a>
+        <a href="https://wa.me/13235489218" className="contact-icon">
+        <img width="48" height="48" src="https://img.icons8.com/color/100/whatsapp--v1.png" alt="whatsapp--v1"/>
+        <span>+1 (323) 548-9218</span>
+
+        </a>
+        <a href="https://t.me/cabaremodeling" className="contact-icon">
+        <img width="48" height="48" src="https://img.icons8.com/color/48/telegram-app--v1.png" alt="telegram-app--v1"/> 
+        <span>+1 (323) 548-9218</span>
+        </a>
       </div>
     </div>
 
-    <div className="footer-section">
-      <h3>Location</h3>
-      <p>Southern California</p>
-    </div>
   </div>
   
   <p className="copyright">© {new Date().getFullYear()} CABA Remodeling. All rights reserved.</p>
