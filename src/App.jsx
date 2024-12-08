@@ -82,14 +82,19 @@ const App = () => {
           {[
             {
               title: " 💸 Instantly Increases Your Home Value",
-              text: "Remodeling your house is an investment. The more value you add, the more value you get back. Premium materials, expert craftsmanship, and modern upgrades directly impact your property's market value. On Average Houses Appreciate: ",
+              text: "Remodeling your house is an investment. The more value you add, the more value you get back. On average remodeled houses appreciate:",
               numbers:"30-70%"
             },
             {
-              title: " ⭐️ Turn Your Dreams Into Reality",
-              text: "Every home has untapped potential waiting to be discovered. Our expert team transforms your vision into stunning spaces that exceed expectations, delivering premium craftsmanship that stands the test of time.",
+              title: " ⭐️ Experience Living In  Your Dream Home",
+              text: "Transform your house into exactly what you want. Customize every part to perfection so that you can live in your dream home like many others:",
               numbers:"Over 50 Homes Transformed "
             },
+          {
+            title: " ⚡️ Higher Safety & More Energy Efficient",
+            text: "Upgrading your home can increase safety and help you save money. Having better systems in place can make your life easier & save annualy around: ",
+            numbers:"$1000-$3000"
+          },
 
           ].map((reason, index) => (
             <div key={index} className="reason-card">
@@ -104,46 +109,6 @@ const App = () => {
       </section>
 
 
-
-      <section className="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div className="testimonials-grid">
-          {[
-            {
-              image: "https://i.pinimg.com/736x/7c/de/ec/7cdeecfebe50d289f1eddc7c289d1f6a.jpg ",
-              text: "They remodeled our bathroom super quickly and came out exactly how i expected!",
-              name: "Jenifer",
-              project: "Bathroom Remodel"
-            },
-            {
-              image: "https://i.pinimg.com/736x/c4/f8/9b/c4f89ba3d36f5e2e69e7a64b844076d1.jpg ",
-              
-              text: "Excellent work and Great Price!",
-              name: "Michael",
-              project: "Bathroom Remodel"
-            },
-            {
-              image: "https://i.pinimg.com/736x/62/aa/34/62aa342b793ea80f525a8c1c7254dc6c.jpg ",
-              text: "Amazing Job they were very transparent",
-              name: "Hector",
-              project: "Bathroom Remodel"
-            },
-            {
-              image: "https://i.pinimg.com/736x/35/31/7c/35317ce0c2f4ffe1edcccf0bfd5c6e5b.jpg",
-              text: "Super Fast and surpassed my expectations!",
-              name: "Serena",
-              project: "Bathroom Remodel"
-            },
-          ].map((testimonial, index) => (
-            <div key={index} className="testimonial-card">
-              <img src={testimonial.image}></img>
-              <p className="testimonial-text">"{testimonial.text}"</p>
-              <p className="testimonial-name">{testimonial.name}</p>
-              <p className="testimonial-project">{testimonial.project}</p>
-            </div>
-          ))}
-        </div>
-      </section>
       <section className="portfolio">
       <h2>Our Past Work</h2>
       <div className="portfolio-grid">
@@ -162,8 +127,6 @@ const App = () => {
           {image: "https://i.pinimg.com/736x/7c/de/ec/7cdeecfebe50d289f1eddc7c289d1f6a.jpg"},
           {image: "https://i.pinimg.com/736x/62/aa/34/62aa342b793ea80f525a8c1c7254dc6c.jpg"},
           {image: "https://i.pinimg.com/736x/35/31/7c/35317ce0c2f4ffe1edcccf0bfd5c6e5b.jpg"},
-          {image: "https://cdn.discordapp.com/attachments/1056050237438959728/1313353528911069305/image.jpg?ex=674fd34a&is=674e81ca&hm=21b93439d251bcc68dff4a60d192fe2f2743db9813d9c6cd669e3beacf4936e0&"},
-          {image: "https://cdn.discordapp.com/attachments/1056050237438959728/1313353521105469501/image.jpg?ex=674fd348&is=674e81c8&hm=402aa1e2c213a0f0cc20b77cbde3be9fc2735f6e100533621701685b084d86b6&"},
           
 
 
@@ -178,6 +141,56 @@ const App = () => {
       </div>
     </section>
 
+
+
+
+      <section className="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div className="testimonials-grid">
+          {[
+            {
+              name: "Jennifer Smith",
+              project: "Complete Kitchen Remodel",
+              rating: 5,
+              text: "They transformed our outdated kitchen into a modern masterpiece! The team was professional, clean, and finished ahead of schedule. The attention to detail was remarkable.",
+              image: "/api/placeholder/400/300",
+              date: "March 2024",
+              projectValue: "$45,000",
+              location: "Los Angeles, CA"
+            },
+            {
+              name: "Michael Rodriguez",
+              project: "Master Bathroom Renovation",
+              rating: 5,
+              text: "Outstanding craftsmanship and service. They helped us design our dream bathroom and executed it perfectly. The tile work is absolutely beautiful!",
+              image: "/api/placeholder/400/300",
+              date: "February 2024",
+              projectValue: "$25,000",
+              location: "Orange County, CA"
+            },
+            {
+              name: "Sarah Johnson",
+              project: "Full House Remodel",
+              rating: 5,
+              text: "A complete transformation of our 1960s home. The team was incredible from start to finish. They stayed within budget and the results exceeded our expectations.",
+              image: "/api/placeholder/400/300",
+              date: "January 2024",
+              projectValue: "$120,000",
+              location: "San Diego, CA"
+            }
+          ].map((testimonial, index) => (
+            <div key={index} className="testimonial-card">
+              <img src={testimonial.image}></img>
+              <p className="testimonial-text">"{testimonial.text}"</p>
+              <p className="testimonial-name">{testimonial.name}</p>
+              <p className="testimonial-project">{testimonial.project}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
+      
     <footer className="footer">
   <div className="footer-content">
     <div className="footer-section">

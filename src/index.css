@@ -146,7 +146,7 @@ h2 {
   border-radius: 1rem;
   display: grid;
   grid-template-columns: 300px 1fr;
-  gap: 2rem;
+  gap: 1rem;
   box-shadow: 0 0 20px #DFA46D;
   transition: box-shadow 0.3s ease;
 }
@@ -276,8 +276,8 @@ h2 {
 .portfolio-grid {
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 0.5rem;
 }
 
 .portfolio-card {
@@ -296,7 +296,7 @@ h2 {
 }
 
 .portfolio-card:hover img {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 /* Footer */
@@ -342,6 +342,14 @@ h2 {
   color: #9ca3af;
   margin-top: 2rem;
 }
+
+
+
+
+
+
+
+
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
@@ -395,12 +403,16 @@ h2 {
   .services-grid{
     width: 100%;
   }
+  .reasons-grid{
+    gap: 0rem;
+  }
 
 
 
   .reason-card {
     grid-template-columns: 1fr;
     padding: 1rem;
+    gap: 1rem;
   }
 
   .reason-card img {
@@ -431,8 +443,11 @@ h2 {
   }
 
   .portfolio-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 2fr);
+    margin: 0 auto;
+    display: grid;
   }
+  
 
   .footer-content {
     grid-template-columns: 1fr;
@@ -459,9 +474,7 @@ h2 {
     width: 200px;
   }
 
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
+
 
   .service-card,
   .testimonial-card {
