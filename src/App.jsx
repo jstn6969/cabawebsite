@@ -1,9 +1,23 @@
-import React from 'react';
 import './App.css';
 import cabaLogo from '/src/assets/cabalogo.png';  // Add this at the top of your file
+import React, { useState } from 'react';
 
+const ImageModal = ({ image, onClose }) => {
+  if (!image) return null;
+  
+  return (
+    <div className="image-modal" onClick={onClose}>
+      <div className="modal-content">
+        <button className="close-button" onClick={onClose}>×</button>
+        <img src={image} alt="Portfolio work" />
+      </div>
+    </div>
+  );
+};
 
 const App = () => {
+  const [selectedImage, setSelectedImage] = useState(null);  // Add this line
+  
   return (
     <div className="app">
       
@@ -19,11 +33,11 @@ const App = () => {
             <p>We Can Do It All, Customly Made To Your Liking</p>
 
           </div>
-          <form className="hero-form">
-            <input type="text" placeholder="Full Name" className="form-input"required />
-            <input type="email" placeholder="Email" className="form-input" required />
-            <input type="pn" placeholder="Phone Number" className="form-input" required />
-            <button className="cta-button">Get Your Free Estimate</button>
+          <form className="hero-form" action="https://formsubmit.co/jusitinflores23@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Full Name" className="form-input" required />
+            <input type="email" name="email" placeholder="Email" className="form-input" required />
+            <input type="tel" name="phone" placeholder="Phone Number" className="form-input" required />
+            <button type="submit" className="cta-button">Get Your Free Estimate</button>
           </form>
           </div>
       </section>
@@ -136,10 +150,22 @@ const App = () => {
           // Add more images
         ].map((item, index) => (
           <div key={index} className="portfolio-card">
-            <img src={item.image} alt="Portfolio work" />
+            <img 
+              src={item.image} 
+              alt="Portfolio work" 
+              onClick={() => setSelectedImage(item.image)}
+            />
           </div>
         ))}
       </div>
+      {selectedImage && (
+        <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setSelectedImage(null)}>×</button>
+            <img src={selectedImage} alt="Enlarged portfolio" />
+          </div>
+        </div>
+      )}
     </section>
 
 
